@@ -111,6 +111,13 @@ public class Manager implements IJobListener {
 		@Override
 		protected void afterExecute(Runnable r, Throwable t) {
 			super.afterExecute(r, t);
+
+			if (t != null) {
+				// indicates that there was a failure executing the Job
+				LOGGER.warning(t.getMessage());
+				return;
+			}
+
 			if (r != null && r instanceof Job)
 				jobComplete((Job) r);
 		}

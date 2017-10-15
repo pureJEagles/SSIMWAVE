@@ -1,5 +1,7 @@
 package com.ssimwave.challenge;
 
+import com.ssimwave.challenge.Publisher.MissingConsoleException;
+
 /**
  * The program entry point responsible for reading command line parameters for
  * initial execution.
@@ -42,7 +44,13 @@ public class CLIRunner {
 			Manager mgr = new Manager(numWorkersPerManager);
 			publisher.addJobListener(mgr);
 		}
-		publisher.start();
+
+		try {
+			publisher.start();
+		} catch (MissingConsoleException mce) {
+			System.err.println("Failed to start Publisher."
+					+ "  No console for CLI input.");
+		}
 	}
 
 }

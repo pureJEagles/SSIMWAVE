@@ -38,9 +38,24 @@ public class Publisher {
 		this.jobNotifierPool = Executors.newCachedThreadPool();
 	}
 
-	public void start() {
+	/** Exception used to indicate that the Console is not available. */
+	public class MissingConsoleException extends Exception {
+		private static final long serialVersionUID = 1L;
+	}
+
+	/**
+	 * Tells the {@link Publisher} to start listening to the console for user
+	 * input.
+	 * 
+	 * @throws MissingConsoleException
+	 *             thrown if the {@link Console} is not available.
+	 */
+	public void start() throws MissingConsoleException {
+		Console console = System.console();
+		if (console == null)
+			throw new MissingConsoleException();
+
 		while (true) {
-			Console console = System.console();
 			StringBuilder sb = new StringBuilder();
 			sb.append(
 					"Enter the number of jobs you wish to create and hit <Enter>.\n")
