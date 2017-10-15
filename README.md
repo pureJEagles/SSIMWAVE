@@ -1,5 +1,4 @@
-# SSIMWAVE
-SSIMWAVE coding challenge
+# SSIMWAVE Coding Challenge
 
 The above files represent an Eclipse Java project, along with the source code, for the SSIMWAVE coding challenge.
 
