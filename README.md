@@ -25,11 +25,11 @@ Runs program using 5 managers with 40 workers each.
 
 Once running, the program will respond to two types of commands from the CLI:
 
-1.  Type a number and hit <Enter>.<br>
+1.  Type a number and hit 'Enter'.<br>
     This will result in the creation of the specified number of jobs.
     
-2.  Type 'quit' and hit <Enter>.<br>
-    This will result in the termination of the program and an output of the stats.
+2.  Type 'quit' and hit 'Enter'.<br>
+    This will result in the termination of the program and display of the stats.
     
 Commands can be entered while output is scrolling.
 
