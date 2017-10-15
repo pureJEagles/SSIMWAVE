@@ -16,15 +16,15 @@ This will execute the program with the default parameters of 3 managers with 10 
 
 You can change the number of managers and workers using program parameters as follows:
 
-java com.ssimwave.challenge.CLIRunner [numManagers numWorkersPerManager]
+<pre>java com.ssimwave.challenge.CLIRunner [numManagers numWorkersPerManager]</pre>
 If you specify a number of managers, you must also specify the number of workers (i.e. two parameters or nothing).
  
-Command: java com.ssimwave.challenge.CLIRunner 5 40
+Command: <pre>java com.ssimwave.challenge.CLIRunner 5 40</pre>
 Result: Runs program using 5 managers with 40 workers each.
 
 Once running, the program will respond to two types of commands from the CLI:
 
-1.  Type a number and hit <Enter>.
+1.  Type a number and hit <Enter>.<br>
     This will result in the creation of the specified number of jobs.
     
 2.  Type 'quit' and hit <Enter>.
