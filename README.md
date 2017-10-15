@@ -1,0 +1,2 @@
+# SSIMWAVE
+SSIMWAVE coding challenge
